@@ -15,6 +15,9 @@ class String
   end
 
   def count_sentences   #regex
-       self.split(/\.|\?|\!/).delete_if {|w| w.size < 2}.size
+    count = 0 
+    count = self.split(".") && self.split("?") && self.split("!")
+    final_count = count.compact
+    final_count.size
   end
 end
